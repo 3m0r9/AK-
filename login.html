@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="kRnqwi4uGrtAg4gvPbbiR5RLyNilk9pYY9EZkSp7">
+
+    <title>AK store</title>
+
+    <!-- Scripts -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="css/app.css" rel="stylesheet">
+    <style>
+        body{
+            background-image: linear-gradient(#FDC830 10%, #fff,#fff);
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+        input {
+            text-align: right;
+        }
+
+
+        .card-body label {
+            font-size: 15px;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid m-0 p-0">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    AK store
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                                                    <li class="nav-item">
+                                <a class="nav-link" href="login.html">
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+
+
+
+
+
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-0">
+            
+    <div class="row justify-content-center p-3 mt-5">
+        <div class="col-md-8 d-flex justify-content-center align-items-center">
+            <div class="card" style="background-image: linear-gradient(#FDC830 10%, #fff,#fff);">
+                                <img src="uploads/settings/6341da7dc1252.png" style="height: 100px;width: 300px;padding: 10px;border-bottom: 2px solid #ccc;" class="card-img-top image-card-logo" alt="">
+                                <div class="card-body text-right " >
+                    <form method="get" action="https://ak-storesa.com/adminLogin" id="user-login">
+                        <input type="hidden" name="_token" value="kRnqwi4uGrtAg4gvPbbiR5RLyNilk9pYY9EZkSp7">                        <div class="form-group">
+                            <label for="email">البريد الالكتروني</label>
+                            <input type="email" name="email" id="email" class="form-control " value="" required autocomplete="email" placeholder="البريد الالكتروني" autofocus>
+                                                    </div>
+
+
+                        <div class="form-group">
+                            <label for="password">كلمة المرور</label>
+                            <input type="password" name="password" id="password" class="form-control " placeholder="كلمة المرور">
+                                                    </div>
+
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                تسجيل الدخول
+                            </button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+
+                    
+
+
+                    
+
+
+                    <div class="row my-3 ">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger text-center collapse " id="alert-danger">
+
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+        </main>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+
+        $(document).on('submit','#user-login',function (e){
+            e.preventDefault();
+            var form = $(this);
+            var btn = form.find('button');
+            btn.prop('disabled',true);
+            var url = $(this).attr('action');
+            $.ajax({
+                headers :  {
+                    'X-CSRF-TOKEN':$('input[name="_token"]').val()
+                },
+                url:url,
+                method:"post",
+                data: new FormData(this),
+                dataType:"json",
+                cache:false,
+                contentType:false,
+                processData:false,
+                beforeSend:function (){
+                    $('#alert-danger').hide();
+                    $('#alert-success').hide();
+                },
+                success:function (response){
+                    if (response.status === 'success'){
+                        btn.prop('disabled',false);
+                        window.location.replace("https://ak-storesa.com/admin/order");
+                    }
+
+
+                    else if (response.status === 'error'){
+                        btn.prop('disabled',false);
+                        $('#alert-danger').html('خطأ في الايميل او كلمة المرور');
+                        $('#alert-danger').show();
+                    }
+
+                },
+                error: function (xhr) {
+                    console.log((xhr.responseJSON.errors));
+                    $('#alert-danger').html('');
+                    $.each(xhr.responseJSON.errors, function(key,value) {
+                        $('#alert-danger').append('<li>'+value+'</li>');
+                    });
+                    $('#alert-danger').show();
+                    btn.prop('disabled',false);
+                }
+            })
+        });
+
+    </script>
+</body>
+</html>
