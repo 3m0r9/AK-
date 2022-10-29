@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        بلايستيشن 5 cd بيد الأساسية
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=cocon-next-arabic" />
+
+    <!-- Demo styles -->
+    <style>
+
+        body {
+            background: #eee;
+            font-family: 'cocon-next-arabic',sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .footer {
+                        background-color : #FFC400;
+                        padding-bottom: 20px;
+            color: white;
+        }
+
+        .links,.links-social {
+            list-style: none;
+            text-align: right;
+        }
+
+        .links li a {
+
+                        color : #ffffff;
+                        text-decoration: underline;
+        }
+
+        .links-social li {
+            float: right;
+        }
+
+        .links-social span a {
+
+                        color : #ffffff;
+            
+            background-color: #0000001f;
+        }
+
+        .links-social span a:hover {
+            background-color: #00000042;
+        }
+
+        .vat-num,.ec-num {
+            display: inline-block;
+        }
+
+        .vat-num span,.ec-num span {
+            display: block;
+        }
+        .marquee  {
+            /*animation: marquee 5s linear infinite;*/
+        }
+
+        /*.marquee2 span {*/
+        /*    animation-delay: 2.5s;*/
+        /*}*/
+
+        @keyframes  marquee {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(-100%, 0);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .grad {
+            
+            background-image: linear-gradient(#FFC400 10%, #fff,#fff);
+            
+        }
+
+        .trade-marks {
+            background-color: #fff;
+        }
+        .checked {
+            color: orange;
+            font-size:7px ;
+        }
+        .product-price {
+            color: #19227A;
+            font-size: 14px;
+            display: block;
+        }
+        .card {
+            border-radius: 20px;
+        }
+        .card-body{
+            padding: 2px 10px;
+        }
+
+        .shopping-link {
+            background-color: #19227A;
+            border-radius: 50%;
+            color: white;
+            padding: 9px 15px;
+            font-size: 20px;
+            float: left;
+        }
+        .shopping-link:hover {
+            background-color: #D7B865;
+        }
+        .input-icons i {
+            position: absolute;
+        }
+
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .icon {
+            padding: 20px 0 0 20px;
+            color: #0088fd;
+            min-width: 50px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .input-field {
+            width: 70%;
+            padding: 9px 33px 5px 0;
+            text-align: right;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid #cccccc;
+            font-size: 15px;
+        }
+        .input-field:focus {
+            outline: none;
+        }
+
+
+        .links-menu a {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .links-menu a:hover {
+            color: #ffffff;
+        }
+
+        .links-menu a::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #19227A;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .links-menu a:hover::before {
+            transform: scaleX(1);
+        }
+
+        .hidden-menu{
+            display: none;
+            position: absolute;
+            z-index: 3;
+            background-color: #ffffff;
+            text-align: right;
+        }
+
+        .hidden-menu ul {
+            list-style: none;
+        }
+
+        .hidden-menu ul li {
+            margin: 10px;
+        }
+        /*sidebar*/
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            background-color: #FFC400;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: right;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            margin-right: 30px;
+        }
+
+        .sidebar a:first-of-type {
+            margin-right: 15px;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 40px;
+            cursor: pointer;
+            background-color: white;
+            color: #1fa6d5;
+            padding: 5px 10px;
+            border: none;
+        }
+
+        .openbtn:focus {
+            outline: none;
+        }
+
+        .element-no {
+            border-radius: 56%;
+            padding: 5px 8px;
+            position: absolute;
+            font-size: 11px;
+            left: 21px;
+            color: white;
+            top: 19px;
+            background-color: #ff0000;
+        }
+
+        .cat-image {
+            width: 50px; height: 50px;margin: 5px 0;
+        }
+
+        .link-img {
+            float: left;
+            padding: 0 !important;
+        }
+
+        .swiper-image{
+            height: 200px !important;
+            width: 200px;
+            object-fit: contain !important;
+        }
+
+
+        .product-cover{
+            height: 300px;
+            width: 400px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .card h1 {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom:  0;
+        }
+
+        .card .rating {
+            margin-bottom: 20px;
+        }
+        .old-price {
+            color: #3b3b3b;
+            font-size: 18px !important;
+        }
+
+        .price {
+            color: orange;
+            font-size: 18px !important;
+        }
+
+        .rating .checked {
+            font-size: 14px !important;
+        }
+
+        .card .cart-button {
+            border: none;
+            outline: 0;
+            padding: 5px;
+            color: white;
+
+            background-color:  #FFC400;
+            text-align: center;
+            cursor: pointer;
+            width: 60px;
+            position: absolute;
+            bottom: 10px;
+            border-radius: 50%;
+            left: 10px;
+            height: 60px;
+            font-size: 35px;
+        }
+
+        .card .cart-button:hover {
+            opacity: 0.7;
+        }
+
+        .card-cover {
+            width:296px !important;
+            height: 250px !important;
+        }
+
+        .swiper-slide{
+            background: none !important;
+        }
+
+        .alert-danger {
+            text-align: right !important;
+        }
+
+        .slider {
+          height: 700px;
+        }
+
+        /*mobile*/
+        @media  only screen and (max-width: 600px) {
+            .main-button {
+                display: block !important;
+            }
+            .login-pc,.first-nav-menu ,.shopping-icon ,.search-form{
+                display: none;
+            }
+
+        .slider {
+            height: 250px;
+         }
+            .checked {
+                color: orange;
+                font-size:5px ;
+            }
+
+            .search-mobile {
+                padding: 20px 15px;
+            }
+            .search-mobile img {
+                height: 30px;
+                display: inline;
+            }
+            .search-mobile i {
+                font-size: 15px;
+                padding: 0;
+                display: inline;
+            }
+
+            .search-mobile-input{
+                display: none;
+            }
+
+            .link-slider img {
+                height: 170px;
+            }
+
+            .follow-us {
+                text-align: center !important;
+            }
+            .links-social,.download , .payments-logo {
+                display: flex;
+                justify-content: center;
+                margin: 20px 5px;
+            }
+
+            .element-no {
+                border-radius: 47%;
+                padding: 2px 5px;
+                position: absolute;
+                font-size: 8px;
+                left: 38px;
+                color: white;
+                top: 21px;
+                background-color: #ff0000;
+            }
+
+            .swiper-image {
+                height: 100px !important;
+                width: 100px !important;
+            }
+
+            .swiper-button-next , .swiper-button-prev {
+                display: none;
+            }
+
+            .product-cover{
+                height: 200px;
+                width: 300px;
+            }
+
+
+            .card p {
+                font-size: 12px !important;
+            }
+
+            .card-cover {
+                width: 150px !important;
+                height: 200px !important;
+            }
+
+            .card h1 {
+                font-size: 12px;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+
+            .card .rating {
+                margin-bottom: 20px;
+                text-align: right;
+                padding: 0 10px;
+            }
+
+            .rating .checked {
+                font-size: 10px !important;
+            }
+
+            .card .cart-button {
+                cursor: pointer;
+                width: 30px;
+                bottom: 10px;
+                border-radius: 50%;
+                left: 10px;
+                height: 30px;
+                font-size: 15px;
+            }
+
+            .features .col-md-4 {
+                border-left: none;
+            }
+        }
+
+    /*    end mobile*/
+
+
+
+
+        .whats-link {
+            border-radius: 25px;
+            width: 150px;
+            color: #fff;
+            background-color: #40fa7f;
+            position: fixed;
+            z-index: 5;
+            top: 600px;
+            right: 15px;
+            font-size :18px;
+        }
+
+
+        @media  only screen and (min-width: 768px) {
+            .whats-link {
+                top: 600px;
+                z-index: 5;
+            }
+        }
+
+        @media  only screen and (max-width: 480px) and (min-width: 300px) {
+            .whats-link {
+                top: 450px;
+                z-index: 5;
+            }
+        }
+
+        @media  only screen and (max-width: 480px) and (min-width: 375px) {
+            .whats-link {
+                top: 680px;
+                z-index: 5;
+            }
+        }
+    </style>
+
+        <style>
+        .show-product .checked {
+            color: orange;
+            font-size: 11px;
+        }
+        .show-product .short-desc{
+            background-color: #cccccc40;
+            padding: 10px;
+        }
+
+        .show-product .add-to-cart{
+                        background-color : #FFC400;
+            
+            border: none;
+            width: 100%;
+            color: white;
+            font-weight: bold;
+        }
+        .show-product .add-to-cart:hover {
+            color: white;
+        }
+        .show-product .add-to-cart img{
+            height: 25px;
+            margin-bottom: 5px;
+        }
+
+        .show-product .share-in-social a{
+            color: #000000;
+            margin: 5px 10px;
+            font-size: 20px;
+        }
+        .show-product .share-in-social a:hover{
+            text-decoration: none;
+        }
+        .show-product .details , .show-product .user-rating {
+            
+            background-image: linear-gradient(#FFC400 10%, #fff,#fff);
+            
+            border-radius: 20px;
+        }
+        .show-product .details h3 {
+            color: white;
+            font-size: 20px;
+        }
+        .show-product .details i {
+            border: 3px solid #ffffff;
+            font-weight: bold;
+            padding: 3px;
+        }
+
+        .show-product .rating-content {
+            border-radius: 20px;
+            background-color: #ffffff;
+        }
+
+        .show-product .user-name span {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .show-product .user-rating .stars-section .checked {
+            color: white;
+            font-size: 20px;
+        }
+
+        .show-product .carousel-item img {
+            height: 300px;
+        }
+
+        @media  only screen and (max-width: 600px){
+            .show-product .row .remaining-quantity ,
+            .show-product .row .sales-quantity ,
+            .show-product .row .product-rate {
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+       <div class="d-flex align-items-center">
+       <a href="../getCategoryProduct/10.html">
+      <span class="float-right" style="width: 80px;">
+           New Apple Iphone 14
+      </span>
+       </a>
+
+       <a href="../getCategoryProduct/10.html" class="link-img">
+           <img src="../uploads/categories/631b6312856a4.jpeg" class="img-fluid rounded-top cat-image" alt="">
+       </a>
+   </div>
+       <div class="d-flex align-items-center">
+       <a href="../getCategoryProduct/3.html">
+      <span class="float-right" style="width: 80px;">
+           iphone
+      </span>
+       </a>
+
+       <a href="../getCategoryProduct/3.html" class="link-img">
+           <img src="../uploads/categories/62cf238dc2f4b.png" class="img-fluid rounded-top cat-image" alt="">
+       </a>
+   </div>
+       <div class="d-flex align-items-center">
+       <a href="../getCategoryProduct/5.html">
+      <span class="float-right" style="width: 80px;">
+           بلايستيشن
+      </span>
+       </a>
+
+       <a href="../getCategoryProduct/5.html" class="link-img">
+           <img src="../uploads/categories/6254c10973b0d.jpg" class="img-fluid rounded-top cat-image" alt="">
+       </a>
+   </div>
+       <div class="d-flex align-items-center">
+       <a href="../getCategoryProduct/7.html">
+      <span class="float-right" style="width: 80px;">
+           ipad
+      </span>
+       </a>
+
+       <a href="../getCategoryProduct/7.html" class="link-img">
+           <img src="../uploads/categories/6254c01473678.jpg" class="img-fluid rounded-top cat-image" alt="">
+       </a>
+   </div>
+       <div class="d-flex align-items-center">
+       <a href="../getCategoryProduct/9.html">
+      <span class="float-right" style="width: 80px;">
+           SONY
+      </span>
+       </a>
+
+       <a href="../getCategoryProduct/9.html" class="link-img">
+           <img src="../uploads/categories/6254c33e3cefa.jpg" class="img-fluid rounded-top cat-image" alt="">
+       </a>
+   </div>
+       <div class="d-flex align-items-center">
+       <a href="../getCategoryProduct/6.html">
+      <span class="float-right" style="width: 80px;">
+           سامسونج
+      </span>
+       </a>
+
+       <a href="../getCategoryProduct/6.html" class="link-img">
+           <img src="../uploads/categories/6254c0ba86da2.jpg" class="img-fluid rounded-top cat-image" alt="">
+       </a>
+   </div>
+       <div class="d-flex align-items-center">
+       <a href="../getCategoryProduct/8.html">
+      <span class="float-right" style="width: 80px;">
+           اجهزة كهربائية
+      </span>
+       </a>
+
+       <a href="../getCategoryProduct/8.html" class="link-img">
+           <img src="../uploads/categories/6254bfe7384cc.jpg" class="img-fluid rounded-top cat-image" alt="">
+       </a>
+   </div>
+    </div>
+
+
+<div class="login-pc container-fluid bg-white">
+    <div class="container">
+        <div class="row py-2">
+            <div class="col-md-6">
+                                <a href="../login.html" class="btn float-right" style="background-color: #EBBD37">
+                    <i class="fa-solid fa-circle-user"></i>
+                    تسجيل الدخول
+                </a>
+                                </div>
+            <div class="col-md-6 ">
+                <img src="../images/payments.svg" style="height: 25px;margin-top: 7px;" class="img-fluid rounded-top float-left" alt="">
+            </div>
+        </div>
+    </div>
+    <hr class="m-0">
+</div>
+<div class="container-fluid first-nav bg-white" id="navbar_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-2 d-md-none" >
+                <!--                <div class="main-button" id="main">-->
+                <button class="openbtn" onclick="openNav()">☰</button>
+                <!--                </div>-->
+            </div>
+            <div class="col-md-4 search-form">
+                <form action="https://ak-storesa.com/product/result" method="get">
+                    <div class="form-group">
+                        <div class="input-icons">
+                            <i class="fa fa-search icon">
+                            </i>
+                            <input class="input-field" type="search" name="search"  placeholder="بحث">
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-7 col-md-4 text-center">
+                                    <a href="../index.html">
+                        <img src="../uploads/settings/6341da7dc1252.png" style="height: 60px" class="img-fluid rounded-top" alt="">
+                    </a>
+                
+                <div class="search-mobile-input d-md-none" id="search-mobile-input">
+                    <form action="https://ak-storesa.com/product/result" method="get">
+                    <div class="form-group">
+
+                        <div class="input-icons">
+                            <i class="fa fa-search icon">
+                            </i>
+                            <input class="input-field" name="search" type="search"  placeholder="بحث">
+                            <a href="13.html#" onclick="event.preventDefault(); closeSearch()">
+                                <i class="fa fa-close icon">
+                                </i>
+                            </a>
+                        </div>
+
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="shopping-icon col-md-4">
+                <h3 class="mt-3">
+                    664 SAR
+                    <img src="../images/cart.png" class="img-fluid rounded-top" alt="">
+                    <span class="element-no">5</span>
+                </h3>
+            </div>
+
+            <div class="col-3 d-md-none search-mobile">
+                <img src="../images/cart.png" class="img-fluid rounded-top" alt="">
+                <span class="element-no">5</span>
+
+                <a href="13.html#" onclick="event.preventDefault(); openSearch();">
+                    <i class="fa fa-search icon">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--menu-->
+<div class="container-fluid first-nav-menu ">
+    <div class="container ">
+        <div class="links-menu d-flex justify-content-md-center">
+                            <a href="../getCategoryProduct/10.html" class="nav-link">
+                    New Apple Iphone 14
+                </a>
+                            <a href="../getCategoryProduct/3.html" class="nav-link">
+                    iphone
+                </a>
+                            <a href="../getCategoryProduct/5.html" class="nav-link">
+                    بلايستيشن
+                </a>
+                            <a href="../getCategoryProduct/7.html" class="nav-link">
+                    ipad
+                </a>
+                            <a href="../getCategoryProduct/9.html" class="nav-link">
+                    SONY
+                </a>
+                            <a href="../getCategoryProduct/6.html" class="nav-link">
+                    سامسونج
+                </a>
+                            <a href="../getCategoryProduct/8.html" class="nav-link">
+                    اجهزة كهربائية
+                </a>
+            
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+    <div class="container-fluid m-0 bg-white">
+        <div class="container show-product">
+            <form action="https://ak-storesa.com/showCart/13" method="get">
+
+            <div class="row">
+                <div class="col-md-6 text-center py-3">
+
+                    <img src="../uploads/products/6254b8c8d27de.jpg" style="height: 300px;" class="img-fluid rounded-top" alt="">
+                </div>
+
+                <div class="col-md-6 my-4">
+                    <div class="title text-center">
+                        <h2>بلايستيشن 5 cd بيد الأساسية</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 product-rate">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            (65)
+                        </div>
+                        <div class="col-md-4 sales-quantity">
+                            <img src="../images/military.png" class="img-fluid rounded-top" alt="">
+                            تم شراؤه 90 مرة
+                        </div>
+                        <div class="col-md-4 remaining-quantity">
+                            <img src="../images/flag.png" class="img-fluid rounded-top" alt="">
+                            متبقى 500 فقط
+                        </div>
+
+                        <div class="col-12 text-center mt-3">
+                            <h3 style="color: #FDC413">
+                                2300 ر.س
+                            </h3>
+
+                        </div>
+                        <div class="col-12 mt-md-4">
+                            <div class="form-group text-center" >
+                                <label for="quantity">الكمية</label>
+                                <select name="quantity" id="quantity" class="form-control">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 my-4 d-flex justify-content-center">
+
+                            <div class="form-check form-check-inline my-md-3 ">
+
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="paymentWay" id="" value="الدفع كاش" checked> الدفع كاش
+                                </label>
+                                                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="paymentWay" id="" value="الدفع بالتقسيط"> الدفع بالتقسيط
+                                    </label>
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+
+                                    <button class="btn add-to-cart" type="submit">
+                                        <img src="../images/add-cart.png" class="img-fluid rounded-top" alt="">
+                                        أضف للسلة
+                                    </button>
+
+
+                            </div>
+                        </div>
+
+                    <div class="col-12 share-in-social text-center">
+                        <h3>
+                            شارك المنتج
+                        </h3>
+
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://ak-storesa.com/showProduct/13" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="https://www.pinterest.com/pin/create/button/?url=https://ak-storesa.com/showProduct/13" target="_blank">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+
+                        <a href="https://twitter.com/intent/tweet?text=إطلع هذا المنتج :  بلايستيشن 5 cd بيد الأساسية:https://ak-storesa.com/showProduct/13" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a href="https://api.whatsapp.com/send?text=اطلع على المنتج التالي : بلايستيشن 5 cd بيد الأساسية ----- https://ak-storesa.com/showProduct/13" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                    </div>
+                </div>
+            </form>
+
+            <div class="row my-3 d-flex justify-content-center ">
+                <div class="col-md-6 text-right">
+                    <div class="alert " id="alert">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+                        <div class="col-12 details text-right p-4 mt-4">
+                    <h3 class="text-center">
+                        <i class="fa-solid fa-list-check"></i>
+                        وصف المنتج
+                    </h3>
+
+                    <p>
+                        المعالج: وحدة معالجة مركزية AMD Zen 2 مع 8 نوى بتردد 3.5 جيجاهرتز (تردد متغير)مُعالج الرسومات: 10.28 TFLOPs ، 36 CUs بسرعة 2.23 جيجا هرتز (تردد متغير)الذاكرة العشوائية: 16 جيجابايت GDDR6 / 256 بتالتخزين الداخلي: SSD مخصص 1 تيرا – التخزين قابل للتوسع من خلال فتحة NVMe SSDمحرك الأقراص الضوئية: طراز يأتي بدون محرك أقراص والطراز الآخر بمحرك Blu-ray بدقة 4K UHD
+                    </p>
+                </div>
+
+                            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+
+            <img src="../images/companies.png" class="img-fluid marquee rounded-top companies-logo" alt="">
+
+            <div class="col-12 col-md-3 text-center">
+                
+                                <p>
+                    علامة تجارية مختصة ببيع جميع اكسسوارات الجوال والأجهزة الذكية.
+                </p>
+            </div>
+
+            <div class="col-6 col-md-3 text-center">
+                <h3>
+                    تسوق بأمان
+                </h3>
+
+                <ul class="links ">
+                    <li>
+                        <a href="13.html" class="nav-link">سياسة الخصوصية</a>
+                    </li>
+
+                    <li>
+                        <a href="13.html" class="nav-link">الشروط و الأحكام</a>
+                    </li>
+
+                    <li>
+                        <a href="13.html" class="nav-link">الاستبدال و الاسترجاع</a>
+                    </li>
+
+                    <li>
+                        <a href="13.html" class="nav-link">الالغاء و رد المدفوعات</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-3 text-center">
+                <h3>
+                    روابط تهمك
+                </h3>
+
+                <ul class="links ">
+                    <li>
+                        <a href="13.html" class="nav-link">آلية الضمان</a>
+                    </li>
+
+                    <li>
+                        <a href="13.html" class="nav-link">الضمان الذهبي</a>
+                    </li>
+
+                    <li>
+                        <a href="13.html" class="nav-link">الاسئلة الشائعة</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-3 text-right follow-us">
+                <h3>
+                    تابعونا
+                </h3>
+                <div class="links-social">
+
+
+                   <span>
+                       <a href="https://instagram.com/akstorekas" class="btn m-1 px-2 py-1">
+                           <i class="fa-brands fa-instagram"></i>
+                       </a>
+                   </span>
+
+                    <span>
+                       <a href="https://twitter.com/" class="btn m-1 px-2 py-1">
+                           <i class="fa-brands fa-twitter"></i>
+                       </a>
+                   </span>
+
+                    <span>
+                       <a href="https://wa.me/966594532949" class="btn m-1 px-2 py-1 ">
+                           <i class="fa-brands fa-whatsapp"></i>
+                       </a>
+                   </span>
+
+
+
+
+                </div>
+            </div>
+
+                        <div class="col-12 col-md-6 download text-right">
+
+
+                <a class=" p-0" href="13.html">
+                    <img src="../images/iphone.png" style="height: 40px; width: 150px;" class="img-fluid rounded-top" alt="">
+                </a>
+
+                <a class=" p-0" href="13.html">
+                    <img src="../images/android.png" style="height: 40px; width: 150px;" class="img-fluid rounded-top" alt="">
+                </a>
+
+
+
+            </div>
+            <div class="col-12 payments-logo col-md-6 text-md-left">
+                <img src="../images/payments.svg" style="height: 30px" class="img-fluid rounded-top" alt="">
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+            <div class="col-12 col-md-6 text-right">
+                <p>
+                                            الحقوق محفوظة &copy; إي كي ستور 2022
+                                    </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <img src="../images/tax.png" style="height: 40px" class="img-fluid rounded-top" alt="">
+                <img src="../images/maroof.png" style="height: 30px" class="img-fluid rounded-top" alt="">
+                <div class="vat-num text-center">
+                                        <span>الرقم الضريبي </span>
+                    <span>
+                        ص.ب : 00255
+                    </span>
+                                    </div>
+
+                <div class="ec-num text-center">
+                                        <span>السجل التجاري </span>
+                    <span>2251051747</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+
+
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: false,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    var swiper3 = new Swiper(".mySwiper3", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    //
+    // const el = document.getElementById('show-list');
+    //
+    // const hiddenDiv = document.getElementById('hidden-menu');
+    //
+    // el.addEventListener('mouseover', function handleMouseOver() {
+    //     hiddenDiv.style.display = 'block';
+    // });
+    //
+    // el.addEventListener('mouseout', function handleMouseOut() {
+    //     hiddenDiv.style.display = 'none';
+    //
+    // });
+
+    // hiddenDiv.addEventListener('mouseover', function handleMouseOver() {
+    //     hiddenDiv.style.display = 'block';
+    // });
+    //
+    // hiddenDiv.addEventListener('mouseout', function handleMouseOut() {
+    //     hiddenDiv.style.display = 'none';
+    // });
+
+
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+    }
+
+    function openSearch() {
+        document.getElementById("search-mobile-input").style.display = "block";
+    }
+
+    function closeSearch() {
+        document.getElementById("search-mobile-input").style.display = "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.getElementById('navbar_top').classList.add('fixed-top');
+                // add padding top to show content behind navbar
+            } else {
+                document.getElementById('navbar_top').classList.remove('fixed-top');
+
+                // remove padding top from body
+                document.body.style.paddingTop = '0';
+            }
+        });
+    });
+
+</script>
+
+
+
+</body>
+</html>
